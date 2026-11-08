@@ -9,8 +9,10 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--ink);color:#fff}
-.page{position:relative;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;
-  background:url('bg.jpg') center top/cover no-repeat}
+body::before{content:"";position:fixed;inset:-40px;z-index:-1;
+  background:url('bg.jpg') center/cover no-repeat;filter:blur(28px) brightness(.45)}
+.page{position:relative;max-width:480px;margin:0 auto;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;justify-content:flex-end;
+  background:url('bg.jpg') center 20%/cover no-repeat;box-shadow:0 0 60px rgba(0,0,0,.6)}
 .page::before{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,0) 35%,rgba(10,8,5,.75) 62%,rgba(10,8,5,.96) 100%)}
 .card{position:relative;padding:0 22px 28px;max-width:480px;width:100%;margin:0 auto}
